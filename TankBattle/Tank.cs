@@ -18,7 +18,7 @@ namespace TankBattle
     }
     public class Tank : PictureBox
     {
-        private int hp = 5;
+        private int hp = 10;
 
         public virtual int HP
         {
@@ -125,6 +125,7 @@ namespace TankBattle
             TankLeftImage = (Bitmap)TankUpImage.Clone();
             TankLeftImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
             Image = TankUpImage;
+            form.labelHP.Text = $"{HP}HP".ToString();
             form.Controls.Add(this);
         }
 

@@ -18,7 +18,7 @@ namespace TankBattle
     }
     public class Tank : PictureBox
     {
-        private int hp = 5;
+        private int hp = 10;
 
         public virtual int HP
         {

@@ -141,6 +141,22 @@ namespace TankBattle
                         (t as Tank).HaveSplashGun = true;
                         Controls.Remove(b as SplashGun);
                     }
+                    if (t.Tag == "Tank" && (b.Tag == "Bum" || b.Tag == "EnemyTank") && t.Bounds.IntersectsWith(b.Bounds))
+                    {
+                        if ((t as Tank).Location.X < b.Location.X)
+                            (t as Tank).Location = new Point((t as Tank).Location.X - 5, (t as Tank).Location.Y);
+                        if ((t as Tank).Location.X > b.Location.X)
+                            (t as Tank).Location = new Point((t as Tank).Location.X + 5, (t as Tank).Location.Y);
+                        if ((t as Tank).Location.Y < b.Location.Y)
+                            (t as Tank).Location = new Point((t as Tank).Location.X, (t as Tank).Location.Y - 5);
+                        if ((t as Tank).Location.Y < b.Location.Y)
+                            (t as Tank).Location = new Point((t as Tank).Location.X, (t as Tank).Location.Y + 5);
+                    }
+
+                    if ((t.Tag == "Bum" || t.Tag == "Tank") && b.Tag == "FireBum" && t.Bounds.IntersectsWith(b.Bounds))
+                    {
+                        Controls.Remove(b as PictureBox);
+                    }
                 }
             }
         }

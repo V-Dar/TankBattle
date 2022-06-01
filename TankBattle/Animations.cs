@@ -14,12 +14,12 @@ namespace TankBattle
         {
             PictureBox pBExplose = new PictureBox();
             pBExplose.Location = new Point(x, y);
-            pBExplose.Name = "pBExplose";
+            pBExplose.Name = "Bum";
+            pBExplose.Tag = "Bum";
             pBExplose.Size = new Size(100, 100);
             pBExplose.TabStop = false;
             pBExplose.SizeMode = PictureBoxSizeMode.StretchImage;
             form.Controls.Add(pBExplose);
-            pBExplose.BringToFront();
 
             Timer timer = new Timer();
             timer.Interval = 30;
@@ -53,14 +53,14 @@ namespace TankBattle
         {
             PictureBox pBExplose = new PictureBox();
             pBExplose.Location = new Point(x, y);
-            pBExplose.Name = "pBExplose";
+            pBExplose.Name = "FireBum";
+            pBExplose.Tag = "FireBum";
             int widthImage = 192;
             int heightImage = 192;
             pBExplose.Size = new Size(50, 50);
             pBExplose.TabStop = false;
             pBExplose.SizeMode = PictureBoxSizeMode.StretchImage;
             form.Controls.Add(pBExplose);
-            pBExplose.BringToFront();
 
             Timer timer = new Timer();
             timer.Interval = 30;

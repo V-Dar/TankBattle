@@ -99,10 +99,6 @@ namespace TankBattle
                     CurrentDirection = Direction.Up;
                 }
             }
-            if (diffX < Width && diffY< Width)
-            {
-                CurrentDirection = Direction.Stop;
-            }
         }
         public override void MoveTank()
         {
@@ -132,11 +128,6 @@ namespace TankBattle
                 {
                     Image = TankDownImage;
                     Location = new Point(Location.X, Location.Y + 1);
-                }
-                if (CurrentDirection == Direction.Stop)
-                {
-                    Location = new Point(random.Next(Location.X - Width, Location.X + Width), random.Next(Location.Y - Width, Location.Y + Width));
-                    CurrentDirection = (Direction)random.Next(4);
                 }
             }
         }

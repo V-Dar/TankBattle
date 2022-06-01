@@ -13,7 +13,7 @@ namespace TankBattle
         public SplashGun(Form1 form, int xLocation, int yLocation)
         {
             Tag = "SplashGun";
-            Image = Image.FromFile("Items\\splashGun.bmp");
+            Image = Image.FromFile("Items\\splashGun.png");
             Location = new Point(xLocation, yLocation);
             SizeMode = PictureBoxSizeMode.StretchImage;
             Size = new Size(48, 48);

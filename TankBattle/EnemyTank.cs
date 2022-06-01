@@ -30,7 +30,7 @@ namespace TankBattle
         public override void AddTankOnForm()
         {
             Tag = "EnemyTank";
-            TankUpImage = (Bitmap)Image.FromFile("EnemyTank\\blueTank1.bmp");
+            TankUpImage = (Bitmap)Image.FromFile("EnemyTank\\blueTank1.png");
             TankRightImage = (Bitmap)TankUpImage.Clone();
             TankRightImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
             TankDownImage = (Bitmap)TankUpImage.Clone();

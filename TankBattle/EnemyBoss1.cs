@@ -49,7 +49,7 @@ namespace TankBattle
         }
         public override void AddTankOnForm()
         {
-            TankDownImage = (Bitmap)Image.FromFile("Boss\\boss1.bmp");
+            TankDownImage = (Bitmap)Image.FromFile("Boss\\boss1.png");
             Image = TankDownImage;
             form.Controls.Add(progressHP);
             form.Controls.Add(this);

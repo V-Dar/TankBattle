@@ -63,8 +63,8 @@ namespace TankBattle
                 {
                     form.labelShield.Text = "";
                     string imageShieldOff = "";
-                    if (TankPower == 0) imageShieldOff = "Tank\\greenTank.bmp";
-                    if (TankPower == 1) imageShieldOff = "Tank\\V2greenTank.bmp";
+                    if (TankPower == 0) imageShieldOff = "Tank\\greenTank.png";
+                    if (TankPower == 1) imageShieldOff = "Tank\\V2greenTank.png";
                     TankUpImage = (Bitmap)Image.FromFile(imageShieldOff);
                     TankRightImage = (Bitmap)TankUpImage.Clone();
                     TankRightImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
@@ -77,8 +77,8 @@ namespace TankBattle
                 {
                     form.labelShield.Text = "Shield ON";
                     string imageShieldOn = "";
-                    if (TankPower == 0) imageShieldOn = "Tank\\greenTankShield.bmp";
-                    if (TankPower == 1) imageShieldOn = "Tank\\V2greenTankShield.bmp";
+                    if (TankPower == 0) imageShieldOn = "Tank\\greenTankShield.png";
+                    if (TankPower == 1) imageShieldOn = "Tank\\V2greenTankShield.png";
                     TankUpImage = (Bitmap)Image.FromFile(imageShieldOn);
                     TankRightImage = (Bitmap)TankUpImage.Clone();
                     TankRightImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
@@ -100,7 +100,6 @@ namespace TankBattle
         public Bitmap TankRightImage { get; set; }
         public bool isLeft, isRight, isUp, isDown;
         public Bullet bullet { get; set; }
-        //public List<Bullet> splashBullet = new List<Bullet>();
         protected Direction CurrentDirection { get; set; }
 
 
@@ -117,7 +116,7 @@ namespace TankBattle
         public virtual void AddTankOnForm()
         {
             Tag = "Tank";
-            TankUpImage = (Bitmap)Image.FromFile("Tank\\greenTank.bmp");
+            TankUpImage = (Bitmap)Image.FromFile("Tank\\greenTank.png");
             TankRightImage = (Bitmap)TankUpImage.Clone();
             TankRightImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
             TankDownImage = (Bitmap)TankUpImage.Clone();
@@ -125,6 +124,7 @@ namespace TankBattle
             TankLeftImage = (Bitmap)TankUpImage.Clone();
             TankLeftImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
             Image = TankUpImage;
+            BringToFront();
             form.labelHP.Text = $"{HP}HP".ToString();
             form.Controls.Add(this);
         }

@@ -13,7 +13,7 @@ namespace TankBattle
         public AmmoSplash(Form1 form, int xLocation, int yLocation)
         {
             Tag = "AmmoSplash";
-            Image = Image.FromFile("Items\\ammoSplash.jpg");
+            Image = Image.FromFile("Items\\ammoSplash.png");
             Location = new Point(xLocation, yLocation);
             SizeMode = PictureBoxSizeMode.StretchImage;
             Size = new Size(20, 20);
